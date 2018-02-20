@@ -37,23 +37,23 @@ function total() {
   }
   return sum
 }
-/*
+
 function removeFromCart(item) {
   for (let i = 0; i < cart.length; i++) {
     if (Object.hasOwnProperty(cart[i].item)) {
     cart.splice(i)
   } else {
-    "That item is not in your cart"
+    console.log("That item is not in your cart")
   }
   return cart
   }
 }
-*/
+
 function placeOrder(num) {
   if (isNaN(num)) {
-    console.log("Sorry, we don't have a credit card on file for you.")
+    return "Sorry, we don't have a credit card on file for you."
   } else {
-   var text = `Your total cost is ${total()}, which will be charged to the card ${num}.`
+   const text = `Your total cost is ${total()}, which will be charged to the card ${num}.`
    cart = []
    return text
   }
